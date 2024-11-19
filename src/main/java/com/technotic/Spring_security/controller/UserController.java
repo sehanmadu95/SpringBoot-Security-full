@@ -17,8 +17,16 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/save-user")
+    @PostMapping("/register")
     public Users createUser(@RequestBody Users users){
       return  userService.createUser(users);
     }
+
+
+    @PostMapping("/login")
+    public String login(@RequestBody Users users){
+      return  userService.verifyUser(users);
+    }
+
+
 }
