@@ -1,4 +1,4 @@
-package com.technotic.Spring_security;
+package com.technotic.Spring_security.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
