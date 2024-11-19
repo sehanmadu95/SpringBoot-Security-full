@@ -36,7 +36,7 @@ public class UserService {
 
         if (authenticate.isAuthenticated()){
             log.info("UserService::verifyUser--> login successfully");
-            return jwtService.returnToken();
+            return jwtService.returnToken(users.getUsername());
         }
         else {
             log.info("UserService::verifyUser--> login unsuccessfully");
