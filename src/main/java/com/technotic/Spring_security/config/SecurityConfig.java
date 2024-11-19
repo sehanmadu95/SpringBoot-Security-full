@@ -39,7 +39,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/v1/register","/api/v1/login")
                 .permitAll()
                 .anyRequest().authenticated()); //Enable authenticated for all request.
-        httpSecurity.formLogin(Customizer.withDefaults()); //Enabled the form loging
+        //httpSecurity.formLogin(Customizer.withDefaults()); //Enabled the form loging
         httpSecurity.httpBasic(Customizer.withDefaults()); //Enable Rest APi Access like postman othwse its return only loging form
         httpSecurity.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         /*everytime ceating new session id, then issue with web logging redirect bcz of
